@@ -13,7 +13,7 @@ services:
       # - DB_NAME: nodejs
       MYSQL_ROOT_PASSWORD: 123456
     ports:
-      - "3308:3306"
+      - "3306:3306"
     volumes:
       # Mysql
       - db:/var/lib/mysql
