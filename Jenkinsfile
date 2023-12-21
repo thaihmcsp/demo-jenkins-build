@@ -1,5 +1,5 @@
 pipeline {
-   agent none
+   agent { label 'build-demo agent1'}
    environment {
         ENV = "dev"
         NODE = "Build-server"
@@ -9,11 +9,12 @@ pipeline {
     stage('Build Image') {
         agent {
             node {
-                label "Build-server"
-                customWorkspace "/home/ubuntu/jenkins/multi-branch/devops-training-$ENV/"
+                label "build-demo agent1"
+                customWorkspace "/home/demo-jenkin/demo-jenkins-build/"
                 }
             }
         environment {
+            DOCKERHUB = credentials('thaihmcsp-docker')
             TAG = sh(returnStdout: true, script: "git rev-parse -short=10 HEAD | tail -n +2").trim()
         }
          steps {
