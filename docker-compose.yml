@@ -7,10 +7,10 @@ services:
     container_name: mysql-nodejs
     restart: unless-stopped
     environment:
-      - DB_HOST: mysql
-      - DB_USER: root
-      - DB_PASSWORD: 123456
-      - DB_NAME: nodejs
+      # - DB_HOST: mysql
+      # - DB_USER: root
+      # - DB_PASSWORD: 123456
+      # - DB_NAME: nodejs
       - MYSQL_ROOT_PASSWORD: 123456
     ports:
       - "3308:3306"
