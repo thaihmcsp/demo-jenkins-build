@@ -24,7 +24,7 @@ services:
       - mysql
     build: ./
     ports:
-      - "3000:3000"
+      - "3006:3006"
     volumes:
       - ./:/app
     restart: unless-stopped
