@@ -16,7 +16,7 @@ const pool = mysql.createPool({
   // password: process.env.DB_PASSWORD,
   // database: process.env.DB_NAME,
   host: "mysql",
-  port: 3306,
+  port: "/var/run/mysqld/mysqld.sock",
   user: "root",
   password: "123456",
   database: "nodejs",
