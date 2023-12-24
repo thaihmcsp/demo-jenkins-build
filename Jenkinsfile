@@ -24,7 +24,7 @@ pipeline {
 
             sh "cat docker.txt | docker login -u thaihmcsp --password-stdin"
             // tag docker image
-            sh "docker tag build_server-$ENV:latest build_server:$TAG"
+            sh "docker tag build_server-$ENV:latest thaihmcsp/build_server:$TAG"
 
             //push docker image to docker hub
             sh "docker push thaihmcsp/build_server:$TAG"
