@@ -10,7 +10,7 @@ pipeline {
         agent {
             node {
                 label "build-demo agent1"
-                customWorkspace "/home/demo-jenkin/demo-jenkins-build/"
+                customWorkspace "/home/demo-jenkin/build_folder/"
                 }
             }
         environment {
