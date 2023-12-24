@@ -19,12 +19,12 @@ pipeline {
         }
          steps {
             sh "ls"
-            sh "docker build . -t devops-training-nodejs-$ENV:latest --build-arg BUILD_ENV=$ENV -f ./Dockerfile"
+            sh "docker build . -t build_server-$ENV:latest --build-arg BUILD_ENV=$ENV -f ./Dockerfile"
 
 
             sh "cat docker.txt | docker login -u thaihmcsp --password-stdin"
             // tag docker image
-            sh "docker tag devops-training-nodejs-$ENV:latest build_server:$TAG"
+            sh "docker tag build_server-$ENV:latest build_server:$TAG"
 
             //push docker image to docker hub
             sh "docker push thaihmcsp/build_server:$TAG"
