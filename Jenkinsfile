@@ -27,10 +27,10 @@ pipeline {
             sh "docker tag devops-training-nodejs-$ENV:latest build_server:$TAG"
 
             //push docker image to docker hub
-            sh "docker push build_server:$TAG"
+            sh "docker push thaihmcsp/build_server:$TAG"
 
 	    // remove docker image to reduce space on build server	
-            sh "docker rmi -f build_server:$TAG"
+            sh "docker rmi -f thaihmcsp/build_server:$TAG"
 
            }
          
