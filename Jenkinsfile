@@ -1,5 +1,5 @@
 pipeline {
-   agent { label 'build-demo agent1'}
+   agent { label 'Build-Server'}
    environment {
         ENV = "dev"
         NODE = "Build-server"
