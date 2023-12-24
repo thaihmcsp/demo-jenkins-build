@@ -10,11 +10,11 @@ pipeline {
         agent {
             node {
                 label "Build-Server"
-                customWorkspace "/home/demo-jenkin/build_folder/"
+                customWorkspace "/home/demo-jenkin/build_dev_ops/"
                 }
             }
         environment {
-            DOCKERHUB = credentials('thaihmcsp-docker')
+            // DOCKERHUB = credentials('thaihmcsp-docker')
             TAG = sh(returnStdout: true, script: "git rev-parse -short=10 HEAD | tail -n +2").trim()
         }
          steps {
