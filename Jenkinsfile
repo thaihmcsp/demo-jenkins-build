@@ -22,7 +22,7 @@ pipeline {
             sh "docker build . -t devops-training-nodejs-$ENV:latest --build-arg BUILD_ENV=$ENV -f ./Dockerfile"
 
 
-            sh "cat docker.txt | docker login -u manhhoangseta --password-stdin"
+            sh "cat docker.txt | docker login -u thaihmcsp --password-stdin"
             // tag docker image
             sh "docker tag devops-training-nodejs-$ENV:latest [dockerhub-repo]:$TAG"
 
