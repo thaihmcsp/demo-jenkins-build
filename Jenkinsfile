@@ -9,7 +9,7 @@ pipeline {
     stage('Build Image') {
         agent {
             node {
-                label "build-demo agent1"
+                label "Build-Server"
                 customWorkspace "/home/demo-jenkin/build_folder/"
                 }
             }
