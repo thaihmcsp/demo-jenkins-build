@@ -40,3 +40,4 @@ volumes:
 
 networks:
   nodejss:
+    external: true
