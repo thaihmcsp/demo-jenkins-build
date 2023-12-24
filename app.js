@@ -7,7 +7,7 @@ const swaggerJSDoc = require("swagger-jsdoc");
 require("dotenv").config();
 
 const app = express();
-const port = 3006;
+const port = 3000;
 
 // Create a MySQL connection pool
 const pool = mysql.createPool({
